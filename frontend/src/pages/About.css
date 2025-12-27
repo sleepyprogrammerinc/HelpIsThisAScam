@@ -1,30 +1,74 @@
-.about-wrapper {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #000;
-  color: #fff;
-  overflow: hidden;
+#root, .App {
+  height: auto !important;
+  min-height: 100vh;
+  overflow-y: visible !important;
 }
 
-.about-box {
+html, body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  overflow-y: scroll !important; /* Force scroll */
+}
+
+
+
+.about-wrapper {
+  /* Ensure the container covers the full viewport height */
+  min-height: 100vh;
+  min-width: 100dvw;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  color: white; /* Optional: for text visibility */
+  
+  /* The radial gradient definition */
+    background: radial-gradient(
+    circle at center, /* Shape (circle), Position (center) */
+    #930081,          /* Start color */
+    #6a068c,
+    #000          /* End color */
+  );
+  background-attachment: scroll;
+  padding-bottom: 15rem;
+}
+
+
+.title-box {
   max-width: 800px;
-  padding: 2rem 3rem;
-  background: rgba(255, 255, 255, 0.03);
+  padding: 1rem 4rem;
+  background:#210030;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
-  text-align: center;
+  
+
 }
 
+.ans-box {
+  max-width: 800px;
+  padding: 2rem 3rem;
+  background: #210030;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+}
+
+.break{
+  padding: 1rem 2rem;
+
+}
 .about-title {
   font-family: 'header', serif;
-  font-size: 2rem;
+  font-size: 4rem;
   color: #fff;
-  margin-bottom: 1.5rem;
-  letter-spacing: 0.05em;
+  margin-bottom: 3rem;
+  text-align: center;
+  padding-top: 30rem;
 }
 
 .about-text {
@@ -34,3 +78,4 @@
   color: #ddd;
   text-align: justify;
 }
+
